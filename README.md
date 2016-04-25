@@ -3,7 +3,11 @@
 [![Join the chat at https://gitter.im/rmurphey/js-assessment](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rmurphey/js-assessment?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This repo includes a set of tests that can be used to assess the skills of
-a candidate for a JavaScript position, or to improve one's own skills.
+a candidate for a JavaScript position.
+
+## Before starting
+
+To begin the excercises, fork this repository on your own github account, then clone it to your local machine. When you've completed the excercises, simply create a pull request to `mytalengi/myt-js-assessment`. Your fork will then be reviewed.
 
 ## I want to work on the tests; what do I do?
 To use the tests, you will need to install Node -- you can do this via the
