@@ -48,13 +48,5 @@ exports.arraysAnswers = {
 
   duplicates : function(arr) {
 
-  },
-
-  square : function(arr) {
-
-  },
-
-  findAllOccurrences : function(arr, target) {
-
   }
 };

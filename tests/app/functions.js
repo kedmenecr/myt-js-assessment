@@ -51,12 +51,6 @@ describe('functions', function() {
     }
   });
 
-  it('you should be able to create a "partial" function', function() {
-    var partial = functionsAnswers.partial(sayIt, 'Hello', 'Ellie');
-    expect(partial('!!!')).to.eql('Hello, Ellie!!!');
-    expect(sayItCalled).to.be.ok;
-  });
-
   it('you should be able to use arguments', function () {
     var a = Math.random();
     var b = Math.random();
@@ -69,77 +63,4 @@ describe('functions', function() {
     expect(functionsAnswers.useArguments(a, b, c, d)).to.eql(a + b + c + d);
   });
 
-  it('you should be able to apply functions with arbitrary numbers of arguments', function () {
-    (function () {
-      var a = Math.random();
-      var b = Math.random();
-      var c = Math.random();
-
-      var wasITake2ArgumentsCalled = false;
-      var iTake2Arguments = function (firstArgument, secondArgument) {
-        expect(arguments.length).to.eql(2);
-        expect(firstArgument).to.eql(a);
-        expect(secondArgument).to.eql(b);
-
-        wasITake2ArgumentsCalled = true;
-      };
-
-      var wasITake3ArgumentsCalled = false;
-      var iTake3Arguments = function (firstArgument, secondArgument, thirdArgument) {
-        expect(arguments.length).to.eql(3);
-        expect(firstArgument).to.eql(a);
-        expect(secondArgument).to.eql(b);
-        expect(thirdArgument).to.eql(c);
-
-        wasITake3ArgumentsCalled = true;
-      };
-
-      functionsAnswers.callIt(iTake2Arguments, a, b);
-      functionsAnswers.callIt(iTake3Arguments, a, b, c);
-
-      expect(wasITake2ArgumentsCalled).to.be.ok;
-      expect(wasITake3ArgumentsCalled).to.be.ok;
-    }());
-  });
-
-  it('you should be able to create a "partial" function for variable number of applied arguments', function () {
-    var partialMe = function (x, y, z) {
-      return x / y * z;
-    };
-
-    var a = Math.random();
-    var b = Math.random();
-    var c = Math.random();
-    expect(functionsAnswers.partialUsingArguments(partialMe)(a, b, c)).to.eql(partialMe(a, b, c));
-    expect(functionsAnswers.partialUsingArguments(partialMe, a)(b, c)).to.eql(partialMe(a, b, c));
-    expect(functionsAnswers.partialUsingArguments(partialMe, a, b)(c)).to.eql(partialMe(a, b, c));
-    expect(functionsAnswers.partialUsingArguments(partialMe, a, b, c)()).to.eql(partialMe(a, b, c));
-  });
-
-  it('you should be able to curry existing functions', function () {
-    var curryMe = function (x, y, z) {
-      return x / y * z;
-    };
-
-    var a = Math.random();
-    var b = Math.random();
-    var c = Math.random();
-    var result;
-
-    result = functionsAnswers.curryIt(curryMe);
-    expect(typeof result).to.eql('function');
-    expect(result.length).to.eql(1);
-
-    result = functionsAnswers.curryIt(curryMe)(a);
-    expect(typeof result).to.eql('function');
-    expect(result.length).to.eql(1);
-
-    result = functionsAnswers.curryIt(curryMe)(a)(b);
-    expect(typeof result).to.eql('function');
-    expect(result.length).to.eql(1);
-
-    result = functionsAnswers.curryIt(curryMe)(a)(b)(c);
-    expect(typeof result).to.eql('number');
-    expect(result).to.eql(curryMe(a, b, c));
-  });
 });

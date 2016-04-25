@@ -17,23 +17,7 @@ exports.functionsAnswers = {
 
   },
 
-  partial : function(fn, str1, str2) {
-
-  },
-
   useArguments : function() {
-
-  },
-
-  callIt : function(fn) {
-
-  },
-
-  partialUsingArguments : function(fn) {
-
-  },
-
-  curryIt : function(fn) {
 
   }
 };

@@ -11,16 +11,5 @@ exports.regexAnswers = {
 
   endsWithVowel : function(str) {
 
-  },
-
-  captureThreeNumbers : function(str) {
-
-  },
-
-  matchesPattern : function(str) {
-
-  },
-  isUSD : function(str) {
-
   }
 };
