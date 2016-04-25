@@ -1,9 +1,29 @@
 # A test-driven JS assessment
 
-[![Join the chat at https://gitter.im/rmurphey/js-assessment](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rmurphey/js-assessment?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 This repo includes a set of tests that can be used to assess the skills of
-a candidate for a JavaScript position, or to improve one's own skills.
+a candidate for a JavaScript position.
+
+Sometimes these tests are done while pressed on time, in such case you should prioritize some parts that are considered more important. Below are some test suites that you do _not_ have to prioritize. If you're pressed on time, please skip the following parts.
+
+_Not so important test suites (`file.js`)_
+
+- `app/count.js`
+- `app/numbers.js`
+
+_Not so important individual tests (`file.js #test, #anotherTest`)_
+
+- `app/arrays.js #square, #findAllOccurrences`
+- `app/async.js #manipulateRemoteData`
+- `app/functions.js #partial, #callIt, #partialUsingArguments, #curryIt`
+- `app/recursion.js #permute, #fibonacci, #validParentheses`
+- `app/regex.js #captureThreeNumbers, #matchesPattern, #isUSD`
+- `app/strings.js #wordWrap, #reverseString`
+
+## Before starting
+
+To begin the exercises, fork this repository on your own github account, then clone it to your local machine. When you've completed the exercises, simply download a ZIP of your solutions and send it via e-mail to your contact. Please do _not_ submit a public pull request, as other candidates will have access to these.
+
+When working with these tests, you may not alter the tests themselves. The test suite is constructed so that it will invoke your methods and test their functionality, there is no need to change the tests, only your methods. In other words, please do not make updates in `tests/app/*`, only use these files as reference and instructions to your task.
 
 ## I want to work on the tests; what do I do?
 To use the tests, you will need to install Node -- you can do this via the
@@ -40,56 +60,24 @@ You can also develop with live-reload and grunt-watch if that's your thing:
     npm install
     grunt develop
 
+## How to work with these tasks
+
+One way of working with these exercises is to open up the `app/<filename-a>.js`, and the `tests/app/<filename-a>.js`. By reading the test written in the `tests/..` folder and the comments in the `app/..` folder, you will be able to understand what is expected of you in order to solve each test.
+
+Having a split screen text editor can greatly help like shown below.
+
+![Workflow screenshot](working-on-excercise.png)
+
+After completing all tasks, `localhost:4444` should only show green test cases.
+
 ## I need help!
 
-There may be friendly folks willing to help you in \#js-assessment or
-\#jshotline on freenode IRC.
-
-## I want to contribute tests; what do I do?
-
-Submit a pull request! The tests are currently loosely organized by topic, so
-you should do your best to add tests to the appropriate file in `tests/app`, or
-create a new file there if you don't see an appropriate one. If you do create
-a new file, make sure to add it to `tests/runner.js`, and to add a stub for the
-solution to the corresponding file in `app/`. Finally, it would be great if you
-could update the [answers](https://github.com/rmurphey/js-assessment-answers)
-as well.
-
-Any substantial contributions will be duly credited in the readme, as well as
-of course in the git commit log.
-
-### Data-driven tests
-
-If your tests need data that can be fetched via XHR, stick a `.json` file in
-the `data` directory; you can access it at `/data/<filename>.json`.
+If there's anything unclear in the exercises, if you want to confirm something or any other question - don't hesitate to contact André at andre@keepersolutions.com
 
 ### Available dependencies
 
 The repo includes jQuery, Backbone, and Underscore. Do take advantage of these
 libraries when writing your solutions!
-
-## I want to see the answers!
-
-First, bear in mind that looking up the answers is going to teach you a whole
-lot less than you'll learn by working on the tests, even if you occasionally get
-stuck. I'd recommend only looking at the answers once you have the tests
-passing, to see if there's another way you could have approached the
-problem. When you're ready to look at the answers, you can find them
-[here](https://github.com/rmurphey/js-assessment-answers); I'll do my best to
-keep them up to date.
-
-## I hate \<some technology you've chosen\>
-
-This repo uses [Mocha](http://visionmedia.github.com/mocha/) and
-[Chai](http://chaijs.com/) for the tests themselves. It uses the BDD style for authoring tests.
-If this doesn't suit you, please fork away, or, better, submit a pull request that lets
-this be more flexible than it currently is.
-
-# Todos
-
-There are a number of things that would make this project better; check out the
-[issues](https://github.com/rmurphey/js-assessment/issues) for details, pull
-requests welcome!
 
 # License
 
