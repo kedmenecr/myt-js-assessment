@@ -1,7 +1,6 @@
 # A test-driven JS assessment
 
-This repo includes a set of tests that can be used to assess the skills of
-a candidate for a JavaScript position.
+This repository contains a set of tests that is used to assess the skills of a candidate for a JavaScript position, it has been reduced to a subset of tests that are deemed most relevant for a beginner -> intermediate developer.
 
 ## Before starting
 
