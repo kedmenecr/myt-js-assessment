@@ -5,7 +5,7 @@ a candidate for a JavaScript position.
 
 ## Before starting
 
-To begin the excercises, fork this repository on your own github account, then clone it to your local machine. When you've completed the excercises, simply download a ZIP of your solutions and send them via e-mail to your contact. Please do _not_ submit a public pull request, as other candidates will have access to these.
+To begin the excercises, fork this repository on your own github account, then clone it to your local machine. When you've completed the excercises, simply download a ZIP of your solutions and send it via e-mail to your contact. Please do _not_ submit a public pull request, as other candidates will have access to these.
 
 ## I want to work on the tests; what do I do?
 To use the tests, you will need to install Node -- you can do this via the
