@@ -6,6 +6,8 @@ This repository contains a set of tests that is used to assess the skills of a c
 
 To begin the excercises, fork this repository on your own github account, then clone it to your local machine. When you've completed the excercises, simply download a ZIP of your solutions and send it via e-mail to your contact. Please do _not_ submit a public pull request, as other candidates will have access to these.
 
+When working with these tests, you may not alter the tests themselves. The test suite is constructed so that it will invoke your methods and test their functionality, there is no need to change the tests, only your methods. In other words, please do not make updates in `tests/app/*`, only use these files as reference and instructions to your task.
+
 ## I want to work on the tests; what do I do?
 To use the tests, you will need to install Node -- you can do this via the
 [download page](https://nodejs.org/download/) or using
