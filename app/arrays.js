@@ -22,7 +22,10 @@ exports.arraysAnswers = {
   },
 
   removeWithoutCopy: function (arr, item) {
-    return arr.splice(item,item.length);
+    while (arr.indexOf(item) > -1 ){
+      arr.splice(arr.indexOf(item),1);
+    }
+    return arr;
   },
 
   append: function (arr, item) {
@@ -31,13 +34,13 @@ exports.arraysAnswers = {
   },
 
   truncate: function (arr) {
-    return arr.pop();
-
+     arr.pop();
+     return arr;
   },
 
   prepend: function (arr, item) {
-    return arr.unshift(item);
-
+     arr.unshift(item);
+     return arr;
   },
 
   curtail: function (arr) {
