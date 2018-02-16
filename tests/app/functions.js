@@ -14,8 +14,8 @@ describe('functions', function() {
     sayItCalled = false;
   });
 
-  it('you should be able to use an array as arguments when calling a function', function() {
-    var result = functionsAnswers.argsAsArray(sayIt, [ 'Hello', 'Ellie', '!' ]);
+  call_me.apply(this, args);
+  var result = functionsAnswers.argsAsArray(sayIt, [ 'Hello', 'Ellie', '!' ]);
     expect(result).to.eql('Hello, Ellie!');
     expect(sayItCalled).to.be.ok;
   });

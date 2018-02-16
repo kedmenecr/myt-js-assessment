@@ -11,21 +11,23 @@ exports.flowControlAnswers = {
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
     function calculate(num) {
-      console.log(num)
-      if (isInteger(num)) {
-        if (num % 3 === 0) {
-          return 'fizz';
-        }
-        if(num % 5 === 0){
-          return 'buzz';
-        }
-        if(num % 3 === 0 && num % 5 === 0){
+      if (Number.isInteger(num)) {
+        if (num % 3 === 0 && num % 5 === 0) {
           return 'fizzbuzz'
+        } else if (num % 3 === 0) {
+          return 'fizz';
+        } else if (num % 5 === 0) {
+          return 'buzz';
+        } else {
+          return num;
+          console.log(num);
         }
-      } 
-      else{
+      } else {
         return false;
       }
     }
+    // if we dont' return the fucntion it will stop at 2.
+    // it will check if it is an number and then break out 
+    return calculate(num);
   }
 }

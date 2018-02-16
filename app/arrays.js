@@ -11,19 +11,20 @@ exports.arraysAnswers = {
     let sum = 0;
     for (let index = 0; index < arr.length; index++) {
       const element = arr[index];
-      sum += element;
+      sum += arr[index];
+      
     }
     return sum;
   },
 
   remove: function (arr, item) {
-    let newArr = arr.filter(a => { return a !== item });
-    return newArr;
+    return arr.filter(a => a !== item );
   },
 
   removeWithoutCopy: function (arr, item) {
-    while (arr.indexOf(item) > -1 ){
-      arr.splice(arr.indexOf(item),1);
+    var saved;
+    while ((saved = arr.indexOf(item)) > -1) {
+      arr.splice(saved,1);
     }
     return arr;
   },
@@ -34,13 +35,13 @@ exports.arraysAnswers = {
   },
 
   truncate: function (arr) {
-     arr.pop();
-     return arr;
+    arr.pop();
+    return arr;
   },
 
   prepend: function (arr, item) {
-     arr.unshift(item);
-     return arr;
+    arr.unshift(item);
+    return arr;
   },
 
   curtail: function (arr) {
@@ -55,7 +56,7 @@ exports.arraysAnswers = {
   },
 
   insert: function (arr, item, index) {
-    arr.splice(index, item, item);
+    arr.splice(index,0,item);
     return arr;
   },
 
@@ -65,8 +66,7 @@ exports.arraysAnswers = {
     **/
     let occur = 0;
     for (let index = 0; index < arr.length; index++) {
-      const element = arr[index];
-      if (element == item) {
+      if (arr[index] == item) {
         occur++;
       }
     }
@@ -74,10 +74,14 @@ exports.arraysAnswers = {
   },
 
   duplicates: function (arr) {
-    var occur;
-    for (let index = 0; index < arr.length; index++) {
-      const element = arr[index];
-
+    var duplicates = []; 
+    for(let i = 0; i < arr.length;i++){
+      for(let j = i + 1; j < arr.length;j++){
+        if(arr[i]=== arr[j] && duplicates.indexOf(arr[i]) <= -1){
+          duplicates.push(arr[i]);
+        }
+      }
     }
+    return duplicates;
   }
 };
